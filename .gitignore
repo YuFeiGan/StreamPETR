@@ -1,0 +1,9 @@
+data
+result_vis
+work_dirs
+res
+res2
+res3
+test
+*.pyc
+*.pth

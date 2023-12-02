@@ -5,7 +5,8 @@
 # ---------------------------------------------
 import argparse
 import mmcv
-import os
+import os,sys
+sys.path.insert(0, '/home/ubuntu/bev/StreamPETR/')
 import torch
 import warnings
 from mmcv import Config, DictAction

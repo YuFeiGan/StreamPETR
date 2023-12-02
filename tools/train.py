@@ -9,10 +9,11 @@ from __future__ import division
 import argparse
 import copy
 import mmcv
-import os
+import os, sys
 import time
 import torch
 import warnings
+sys.path.insert(0, '/home/ubuntu/bev/StreamPETR/')
 from mmcv import Config, DictAction
 from mmcv.runner import get_dist_info, init_dist, wrap_fp16_model
 from os import path as osp
