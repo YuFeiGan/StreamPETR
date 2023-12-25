@@ -1,0 +1,1 @@
+python tools/train.py projects/configs/StreamPETR/stream_petr_r50_flash_704_bs2_seq_24e.py --work-dir work_dirs/stream_petr_r50_flash_704_bs2_seq_24e/

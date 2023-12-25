@@ -172,8 +172,8 @@ def _fill_trainval_infos(nusc,
                              sd_rec['calibrated_sensor_token'])
         pose_record = nusc.get('ego_pose', sd_rec['ego_pose_token'])
         lidar_path, boxes, _ = nusc.get_sample_data(lidar_token)
-
-        mmcv.check_file_exist(lidar_path)
+        # print(lidar_path)
+        # mmcv.check_file_exist(lidar_path)
 
 
         info = {
@@ -198,7 +198,6 @@ def _fill_trainval_infos(nusc,
         e2g_t = info['ego2global_translation']
         l2e_r_mat = Quaternion(l2e_r).rotation_matrix
         e2g_r_mat = Quaternion(e2g_r).rotation_matrix
-
         if sample['next'] == '':
             frame_idx = 0
         else:
