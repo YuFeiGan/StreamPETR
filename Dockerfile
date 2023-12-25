@@ -55,9 +55,11 @@ RUN pip install yapf==0.40.1
 
 # WORKDIR /home/ubuntu/bev/StreamPETR
 
+
+COPY resnet50-0676ba61.pth /root/.cache/torch/hub/checkpoints/resnet50-0676ba61.pth
+
 RUN mkdir -p /home/ubuntu/bev/StreamPETR/data
 RUN mkdir -p /root/.cache/torch/hub/checkpoints/
-COPY resnet50-0676ba61.pth /root/.cache/torch/hub/checkpoints/resnet50-0676ba61.pth
 COPY nusc_tracking /home/ubuntu/bev/StreamPETR/nusc_tracking
 COPY projects /home/ubuntu/bev/StreamPETR/projects
 # COPY tools /home/ubuntu/bev/StreamPETR/tools
@@ -69,6 +71,7 @@ RUN mkdir -p /home/ubuntu/bev/StreamPETR/test
 RUN mkdir -p /home/ubuntu/bev/StreamPETR/result_vis
 RUN mkdir -p /home/ubuntu/bev/StreamPETR/models
 RUN mkdir -p /home/ubuntu/bev/StreamPETR/script
+RUN mkdir -p /home/ubuntu/bev/StreamPETR/tools
 
 
 
